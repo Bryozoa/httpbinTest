@@ -6,16 +6,16 @@ import org.json.JSONObject;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Java6Assertions.assertThat;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class HttpBinPostTest {
+public class HttpBinStatusCodeTest {
 
     private static final String postUrl = "http://www.httpbin.org/post";
-    private static org.slf4j.Logger LOG = LoggerFactory.getLogger(HttpBinPostTest.class.getSimpleName());
+    private static org.slf4j.Logger LOG = LoggerFactory.getLogger(HttpBinStatusCodeTest.class.getSimpleName());
 
     @Test(groups = "group1")
     public void testPostDefaultBodyResponse() {
