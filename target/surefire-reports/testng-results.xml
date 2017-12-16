@@ -2,7 +2,7 @@
 <testng-results total="20" passed="8" failed="12" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2017-12-16T10:37:12Z" name="Sequential" finished-at="2017-12-16T10:37:16Z" duration-ms="3827">
+  <suite started-at="2017-12-16T10:55:54Z" name="Sequential" finished-at="2017-12-16T10:55:57Z" duration-ms="3664">
     <groups>
       <group name="group2">
         <method signature="HttpBinRedirectTest.testResponseHeadersDefault()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" name="testResponseHeadersDefault" class="Httpbin.HttpBinRedirectTest"/>
@@ -29,9 +29,9 @@
         <method signature="HttpBinStatusCodeTest.testPostJson3()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" name="testPostJson3" class="Httpbin.HttpBinStatusCodeTest"/>
       </group> <!-- group1 -->
     </groups>
-    <test started-at="2017-12-16T10:37:12Z" name="Sequential tests" finished-at="2017-12-16T10:37:16Z" duration-ms="3827">
+    <test started-at="2017-12-16T10:55:54Z" name="Sequential tests" finished-at="2017-12-16T10:55:57Z" duration-ms="3664">
       <class name="Httpbin.HttpBinRedirectTest">
-        <test-method signature="testResponseHeadersDefault()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:37:15Z" name="testResponseHeadersDefault" finished-at="2017-12-16T13:37:16Z" duration-ms="134" status="FAIL">
+        <test-method signature="testResponseHeadersDefault()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:55:56Z" name="testResponseHeadersDefault" finished-at="2017-12-16T13:55:57Z" duration-ms="140" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[[Header - Server] expected:
@@ -78,7 +78,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testResponseHeadersDefault -->
-        <test-method signature="testResponseHeadersInParameters1()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:37:16Z" name="testResponseHeadersInParameters1" finished-at="2017-12-16T13:37:16Z" duration-ms="135" status="FAIL">
+        <test-method signature="testResponseHeadersInParameters1()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:55:57Z" name="testResponseHeadersInParameters1" finished-at="2017-12-16T13:55:57Z" duration-ms="142" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[[Header - Server] expected:
@@ -125,7 +125,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testResponseHeadersInParameters1 -->
-        <test-method signature="testResponseHeadersInParameters2()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:37:16Z" name="testResponseHeadersInParameters2" finished-at="2017-12-16T13:37:16Z" duration-ms="135" status="FAIL">
+        <test-method signature="testResponseHeadersInParameters2()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:55:57Z" name="testResponseHeadersInParameters2" finished-at="2017-12-16T13:55:57Z" duration-ms="140" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -163,7 +163,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testResponseHeadersInParameters2 -->
-        <test-method signature="testResponseHeadersInParameters3()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:37:16Z" name="testResponseHeadersInParameters3" finished-at="2017-12-16T13:37:16Z" duration-ms="135" status="FAIL">
+        <test-method signature="testResponseHeadersInParameters3()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:55:57Z" name="testResponseHeadersInParameters3" finished-at="2017-12-16T13:55:57Z" duration-ms="141" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -201,7 +201,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testResponseHeadersInParameters3 -->
-        <test-method signature="testResponseHeadersInParameters4()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:37:16Z" name="testResponseHeadersInParameters4" finished-at="2017-12-16T13:37:16Z" duration-ms="135" status="FAIL">
+        <test-method signature="testResponseHeadersInParameters4()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:55:57Z" name="testResponseHeadersInParameters4" finished-at="2017-12-16T13:55:57Z" duration-ms="141" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -239,7 +239,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testResponseHeadersInParameters4 -->
-        <test-method signature="testResponseHeadersInvalidMethod()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:37:16Z" name="testResponseHeadersInvalidMethod" finished-at="2017-12-16T13:37:16Z" duration-ms="136" status="FAIL">
+        <test-method signature="testResponseHeadersInvalidMethod()[pri:0, instance:Httpbin.HttpBinRedirectTest@694abbdc]" started-at="2017-12-16T13:55:57Z" name="testResponseHeadersInvalidMethod" finished-at="2017-12-16T13:55:57Z" duration-ms="141" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[[Response code] expected:
@@ -288,11 +288,11 @@
         </test-method> <!-- testResponseHeadersInvalidMethod -->
       </class> <!-- Httpbin.HttpBinRedirectTest -->
       <class name="Httpbin.HttpBinStatusCodeTest">
-        <test-method signature="testPostArgs()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:37:14Z" name="testPostArgs" finished-at="2017-12-16T13:37:15Z" duration-ms="266" status="PASS">
+        <test-method signature="testPostArgs()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:55:55Z" name="testPostArgs" finished-at="2017-12-16T13:55:56Z" duration-ms="274" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostArgs -->
-        <test-method signature="testPostDefaultBodyResponse()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:37:15Z" name="testPostDefaultBodyResponse" finished-at="2017-12-16T13:37:15Z" duration-ms="136" status="FAIL">
+        <test-method signature="testPostDefaultBodyResponse()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:55:56Z" name="testPostDefaultBodyResponse" finished-at="2017-12-16T13:55:56Z" duration-ms="135" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[[Header - Server] expected:
@@ -339,25 +339,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostDefaultBodyResponse -->
-        <test-method signature="testPostInvalidMethod()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:37:15Z" name="testPostInvalidMethod" finished-at="2017-12-16T13:37:15Z" duration-ms="136" status="PASS">
+        <test-method signature="testPostInvalidMethod()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:55:56Z" name="testPostInvalidMethod" finished-at="2017-12-16T13:55:56Z" duration-ms="135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostInvalidMethod -->
-        <test-method signature="testPostJson1()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:37:15Z" name="testPostJson1" finished-at="2017-12-16T13:37:15Z" duration-ms="267" status="PASS">
+        <test-method signature="testPostJson1()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:55:56Z" name="testPostJson1" finished-at="2017-12-16T13:55:56Z" duration-ms="279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostJson1 -->
-        <test-method signature="testPostJson2()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:37:15Z" name="testPostJson2" finished-at="2017-12-16T13:37:15Z" duration-ms="136" status="PASS">
+        <test-method signature="testPostJson2()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:55:56Z" name="testPostJson2" finished-at="2017-12-16T13:55:56Z" duration-ms="143" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostJson2 -->
-        <test-method signature="testPostJson3()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:37:15Z" name="testPostJson3" finished-at="2017-12-16T13:37:15Z" duration-ms="136" status="PASS">
+        <test-method signature="testPostJson3()[pri:0, instance:Httpbin.HttpBinStatusCodeTest@2e005c4b]" started-at="2017-12-16T13:55:56Z" name="testPostJson3" finished-at="2017-12-16T13:55:56Z" duration-ms="142" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostJson3 -->
       </class> <!-- Httpbin.HttpBinStatusCodeTest -->
       <class name="Httpbin.HttpBinHeadersTest">
-        <test-method signature="testGetArgs1()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:37:12Z" name="testGetArgs1" finished-at="2017-12-16T13:37:13Z" duration-ms="690" status="FAIL">
+        <test-method signature="testGetArgs1()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:55:54Z" name="testGetArgs1" finished-at="2017-12-16T13:55:54Z" duration-ms="492" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[[JSON body args] expected:
@@ -404,7 +404,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetArgs1 -->
-        <test-method signature="testGetArgs2()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:37:13Z" name="testGetArgs2" finished-at="2017-12-16T13:37:13Z" duration-ms="141" status="FAIL">
+        <test-method signature="testGetArgs2()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:55:54Z" name="testGetArgs2" finished-at="2017-12-16T13:55:54Z" duration-ms="164" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[[JSON body args] expected:
@@ -451,7 +451,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetArgs2 -->
-        <test-method signature="testGetArgs3()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:37:13Z" name="testGetArgs3" finished-at="2017-12-16T13:37:13Z" duration-ms="140" status="FAIL">
+        <test-method signature="testGetArgs3()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:55:54Z" name="testGetArgs3" finished-at="2017-12-16T13:55:55Z" duration-ms="153" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[[JSON body args] expected:
@@ -498,7 +498,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetArgs3 -->
-        <test-method signature="testGetArgs4()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:37:13Z" name="testGetArgs4" finished-at="2017-12-16T13:37:14Z" duration-ms="144" status="FAIL">
+        <test-method signature="testGetArgs4()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:55:55Z" name="testGetArgs4" finished-at="2017-12-16T13:55:55Z" duration-ms="155" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[[JSON body args] expected:
@@ -545,7 +545,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetArgs4 -->
-        <test-method signature="testGetDefaultBodyResponse()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:37:14Z" name="testGetDefaultBodyResponse" finished-at="2017-12-16T13:37:14Z" duration-ms="147" status="FAIL">
+        <test-method signature="testGetDefaultBodyResponse()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:55:55Z" name="testGetDefaultBodyResponse" finished-at="2017-12-16T13:55:55Z" duration-ms="154" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[[Header - Server] expected:
@@ -592,15 +592,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetDefaultBodyResponse -->
-        <test-method signature="testGetHeaders()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:37:14Z" name="testGetHeaders" finished-at="2017-12-16T13:37:14Z" duration-ms="143" status="PASS">
+        <test-method signature="testGetHeaders()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:55:55Z" name="testGetHeaders" finished-at="2017-12-16T13:55:55Z" duration-ms="153" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetHeaders -->
-        <test-method signature="testGetInvalidMethod()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:37:14Z" name="testGetInvalidMethod" finished-at="2017-12-16T13:37:14Z" duration-ms="158" status="PASS">
+        <test-method signature="testGetInvalidMethod()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:55:55Z" name="testGetInvalidMethod" finished-at="2017-12-16T13:55:55Z" duration-ms="151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetInvalidMethod -->
-        <test-method signature="testGetInvalidUrl()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:37:14Z" name="testGetInvalidUrl" finished-at="2017-12-16T13:37:14Z" duration-ms="266" status="PASS">
+        <test-method signature="testGetInvalidUrl()[pri:0, instance:Httpbin.HttpBinHeadersTest@6e20b53a]" started-at="2017-12-16T13:55:55Z" name="testGetInvalidUrl" finished-at="2017-12-16T13:55:55Z" duration-ms="263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetInvalidUrl -->
