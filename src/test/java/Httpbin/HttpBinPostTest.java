@@ -1,6 +1,7 @@
 package Httpbin;
 
 import com.google.gson.Gson;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
@@ -28,7 +29,12 @@ public class HttpBinPostTest {
         String requestMethod = responseGet.getRequestMethod();
         int responseCode = responseGet.getResponseCode();
         String responseMessage = responseGet.getResponseMessage();
-        JSONObject responseJson = new JSONObject(responseGet.getResponseBody());
+        JSONObject responseJson = null;
+        try {
+            responseJson = new JSONObject(responseGet.getResponseBody());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         Map<String, List<String>> headerFields = responseGet.getHeaderFields();
 
         assertThat(requestMethod).as("Request method").isEqualTo("POST");
@@ -42,32 +48,47 @@ public class HttpBinPostTest {
         assertThat(headerFields.get("Content-Type").get(0)).as("Header - Content-Type").isEqualTo("application/json");
 
 
-        JSONObject responseJsonArgs = getJSONObjectArgs(responseJson);
+        JSONObject responseJsonArgs = HttpBinHelper.getJSONObjectArgs(responseJson);
         assertThat(responseJsonArgs).as("Response JSON Args").isNull();
 
-        JSONObject responseJsonHeaders = getJSONObjectHeaders(responseJson);
+        JSONObject responseJsonHeaders = HttpBinHelper.getJSONObjectHeaders(responseJson);
 
-        String accept = (String) responseJsonHeaders.get("Accept");
-        String userAgent = (String) responseJsonHeaders.get("User-Agent");
-        String host = (String) responseJsonHeaders.get("Host");
+        String accept = null;
+        try {
+            accept = (String) responseJsonHeaders.get("Accept");
+            String userAgent = (String) responseJsonHeaders.get("User-Agent");
+            String host = (String) responseJsonHeaders.get("Host");
 
-        assertThat(accept).as("Response body header Accept").isEqualTo("text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2");
-        assertThat(userAgent).as("Response body header User-Agent").isEqualTo("Mozilla/5.0");
-        assertThat(host).as("Response body header Host").isEqualTo("www.httpbin.org");
+            assertThat(accept).as("Response body header Accept").isEqualTo("text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2");
+            assertThat(userAgent).as("Response body header User-Agent").isEqualTo("Mozilla/5.0");
+            assertThat(host).as("Response body header Host").isEqualTo("www.httpbin.org");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
-        String data = (String) responseJson.get("data");
+        String data = null;
+        try {
+            data = (String) responseJson.get("data");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         assertThat(data).as("Response body data").isEqualTo("");
 
-        JSONObject responseJsonForm = getJSONObjectForm(responseJson);
+        JSONObject responseJsonForm = HttpBinHelper.getJSONObjectForm(responseJson);
         assertThat(responseJsonForm).as("Response JSON Form").isNull();
 
-        JSONObject responseJsonFiles = getJSONObjectFiles(responseJson);
+        JSONObject responseJsonFiles = HttpBinHelper.getJSONObjectFiles(responseJson);
         assertThat(responseJsonFiles).as("Response JSON Files").isNull();
 
-        JSONObject responseJsonJson = getJSONObjectJson(responseJson);
+        JSONObject responseJsonJson = HttpBinHelper.getJSONObjectJson(responseJson);
         assertThat(responseJsonJson).as("Response JSON Json").isNull();
 
-        String url = (String) responseJson.get("url");
+        String url = null;
+        try {
+            url = (String) responseJson.get("url");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         assertThat(url).as("Response body url").isEqualTo(postUrl);
     }
 
@@ -79,20 +100,35 @@ public class HttpBinPostTest {
         Map<String, String> jsonBodyContent = new HashMap<String, String>();
         jsonBodyContent.put("jsonKey1", "jsonValue1");
         jsonBodyContent.put("jsonKey2", "jsonValue2");
-        JSONObject requestJsonBody = new JSONObject(new Gson().toJson(jsonBodyContent));
+        JSONObject requestJsonBody = null;
+        try {
+            requestJsonBody = new JSONObject(new Gson().toJson(jsonBodyContent));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
-        HttpResponse responsePost = HttpRequest
+        HttpBinResponse responsePost = HttpBinRequest
                 .post(postUrl)
-                .addHeader("Content-Type", HttpRequest.CONTENT_TYPE.APPLICATION_JSON.toString())
+                .addHeader("Content-Type", HttpBinRequest.CONTENT_TYPE.APPLICATION_JSON.toString())
                 .addBody(requestJsonBody.toString())
                 .sendAndGetResponse();
 
-        JSONObject responseJson = new JSONObject(responsePost.getResponseBody());
+        JSONObject responseJson = null;
+        try {
+            responseJson = new JSONObject(responsePost.getResponseBody());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
-        JSONObject responseJsonJson = getJSONObjectJson(responseJson);
+        JSONObject responseJsonJson = HttpBinHelper.getJSONObjectJson(responseJson);
         assertThat(responseJsonJson.toString()).as("Json in response body").isEqualTo(requestJsonBody.toString());
 
-        String data = (String) responseJson.get("data");
+        String data = null;
+        try {
+            data = (String) responseJson.get("data");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         assertThat(data).as("Data in response body").isEqualTo(requestJsonBody.toString());
     }
 
@@ -104,20 +140,35 @@ public class HttpBinPostTest {
         Map<String, String> jsonBodyContent = new HashMap<String, String>();
         jsonBodyContent.put("jsonKey1", "jsonValue1");
         jsonBodyContent.put("jsonKey2", "jsonValue1");
-        JSONObject requestJsonBody = new JSONObject(new Gson().toJson(jsonBodyContent));
+        JSONObject requestJsonBody = null;
+        try {
+            requestJsonBody = new JSONObject(new Gson().toJson(jsonBodyContent));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
-        HttpResponse responsePost = HttpRequest
+        HttpBinResponse responsePost = HttpBinRequest
                 .post(postUrl)
-                .addHeader("Content-Type", HttpRequest.CONTENT_TYPE.APPLICATION_JSON.toString())
+                .addHeader("Content-Type", HttpBinRequest.CONTENT_TYPE.APPLICATION_JSON.toString())
                 .addBody(requestJsonBody.toString())
                 .sendAndGetResponse();
 
-        JSONObject responseJson = new JSONObject(responsePost.getResponseBody());
+        JSONObject responseJson = null;
+        try {
+            responseJson = new JSONObject(responsePost.getResponseBody());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
-        JSONObject responseJsonJson = getJSONObjectJson(responseJson);
+        JSONObject responseJsonJson = HttpBinHelper.getJSONObjectJson(responseJson);
         assertThat(responseJsonJson.toString()).as("Json in response body").isEqualTo(requestJsonBody.toString());
 
-        String data = (String) responseJson.get("data");
+        String data = null;
+        try {
+            data = (String) responseJson.get("data");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         assertThat(data).as("Data in response body").isEqualTo(requestJsonBody.toString());
     }
 
@@ -125,19 +176,29 @@ public class HttpBinPostTest {
     public void testPostJson3() {
         LOG.info("Test: testPostJson3");
 
-        HttpResponse responsePost = HttpRequest
+        HttpBinResponse responsePost = HttpBinRequest
                 .post(postUrl)
-                .addHeader("Content-Type", HttpRequest.CONTENT_TYPE.APPLICATION_JSON.toString())
+                .addHeader("Content-Type", HttpBinRequest.CONTENT_TYPE.APPLICATION_JSON.toString())
                 .addBody("{\"jsonKey1\":\"jsonValue2\",\n" +
                         "  \"jsonKey1\":\"jsonValue1\"}")
                 .sendAndGetResponse();
 
-        JSONObject responseJson = new JSONObject(responsePost.getResponseBody());
+        JSONObject responseJson = null;
+        try {
+            responseJson = new JSONObject(responsePost.getResponseBody());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
-        JSONObject responseJsonJson = getJSONObjectJson(responseJson);
+        JSONObject responseJsonJson = HttpBinHelper.getJSONObjectJson(responseJson);
         assertThat(responseJsonJson.toString()).as("Json in response body").isEqualTo("{\"jsonKey1\":\"jsonValue1\"}");
 
-        String data = (String) responseJson.get("data");
+        String data = null;
+        try {
+            data = (String) responseJson.get("data");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         assertThat(data).as("Data in response body").isEqualTo("{\"jsonKey1\":\"jsonValue2\",\n" +
                 "  \"jsonKey1\":\"jsonValue1\"}");
     }
@@ -150,15 +211,25 @@ public class HttpBinPostTest {
         args.put("hello1", "world1");
         args.put("hello2", "world2");
 
-        String argsUrl = convertArgsToString(args);
+        String argsUrl = HttpBinHelper.convertArgsToString(args);
 
-        HttpResponse responsePost = HttpRequest
+        HttpBinResponse responsePost = HttpBinRequest
                 .post(postUrl + argsUrl)
                 .sendAndGetResponse();
 
-        JSONObject responseJsonArgs = getJSONObjectArgs(new JSONObject(responsePost.getResponseBody()));
+        JSONObject responseJsonArgs = null;
+        try {
+            responseJsonArgs = HttpBinHelper.getJSONObjectArgs(new JSONObject(responsePost.getResponseBody()));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
-        JSONObject expectedJsonArgs = new JSONObject(new Gson().toJson(args));
+        JSONObject expectedJsonArgs = null;
+        try {
+            expectedJsonArgs = new JSONObject(new Gson().toJson(args));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         assertThat(responseJsonArgs.toString()).as("JSON body args").isEqualTo(expectedJsonArgs.toString());
     }
@@ -167,7 +238,7 @@ public class HttpBinPostTest {
     public void testPostInvalidMethod() {
         LOG.info("Test: testPostInvalidMethod");
 
-        HttpResponse responseGet = HttpRequest
+        HttpBinResponse responseGet = HttpBinRequest
                 .get(postUrl)
                 .sendAndGetResponse();
 

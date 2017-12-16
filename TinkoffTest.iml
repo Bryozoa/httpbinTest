@@ -25,5 +25,14 @@
     <orderEntry type="library" name="gson-2.6.2" level="project" />
     <orderEntry type="library" name="testng-6.8" level="project" />
     <orderEntry type="library" name="org.assertj:assertj-assertions-generator:2.1.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.testng:testng:6.8.21" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.beanshell:bsh:2.0b4" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.beust:jcommander:1.27" level="project" />
+    <orderEntry type="library" name="Maven: org.easytesting:fest-assert-core:2.0M5" level="project" />
+    <orderEntry type="library" name="Maven: org.easytesting:fest-util:1.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.json:json:20141113" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.7" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.7" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.3.1" level="project" />
   </component>
 </module>
