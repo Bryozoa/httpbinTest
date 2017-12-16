@@ -3,6 +3,15 @@ package Httpbin;
 import java.util.List;
 import java.util.Map;
 
+
+        /* Imported libraries: https://www.slf4j.org/download.html
+         *
+         * Class HttpBinResponse is reading JSON objects.
+         *
+         * Created: 15/12/2017
+         *
+         * */
+
 public class HttpBinResponse {
 
     private int responseCode;

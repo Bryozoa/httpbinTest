@@ -17,6 +17,8 @@ import java.util.Map;
 *
 * Class HttpBinRequest is receiving JSON objects.
 *
+* Created: 15/12/2017
+*
 * */
 
 public class HttpBinRequest {
@@ -124,7 +126,7 @@ public class HttpBinRequest {
 
 
     public enum HTTP_METHOD {
-        GET, PUT, POST, DELETE, OPTIONS, HEAD, CONNECT, TRACE;
+        GET, PUT, POST, DELETE, OPTIONS, HEAD, CONNECT, TRACE
     }
 
     public enum CONTENT_TYPE {

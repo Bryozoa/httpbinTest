@@ -3,17 +3,16 @@ package Httpbin;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* Imported libraries: http://www.java2s.com/Code/Jar/j/Downloadjavajsonjar.htm
-*
-* Class HttpBinHelper is receiving and  processing JSON objects.
-*
-* Created: 15/12/2017
-*
-* @Author: MIsaeva
-*
-* */
-
 import java.util.Map;
+
+        /* Imported libraries: http://www.java2s.com/Code/Jar/j/Downloadjavajsonjar.htm
+         *
+         * Class HttpBinHelper is receiving and  processing JSON objects.
+         *
+         * Created: 15/12/2017
+         *
+         *
+         * */
 
 public class HttpBinHelper {
     protected static final String convertArgsToString(final Map<String, String> args) {

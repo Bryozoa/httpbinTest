@@ -11,7 +11,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.assertj.core.api.Java6Assertions.assertThat;
+//import static org.assertj.core.api.Java6Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 
         /* Imported libraries: http://www.java2s.com/Code/Jar/j/Downloadjavajsonjar.htm
          *                     https://www.slf4j.org/download.html
@@ -19,7 +20,9 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
          *                     http://www.java2s.com/Code/Jar/t/Downloadtestng60jar.htm
          *
          *
-         * Class HttpBinGetTest is testing GET JSON method.
+         * Class HttpBinGetTest is testing http://www.httpbin.org/headers
+         *
+         * Created: 15/12/2017
          *
          * */
 

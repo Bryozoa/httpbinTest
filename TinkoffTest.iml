@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -20,11 +21,12 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="java-json" level="project" />
-    <orderEntry type="library" name="slf4j-1.7" level="project" />
     <orderEntry type="library" name="gson-2.6.2" level="project" />
+    <orderEntry type="library" name="java-json" level="project" />
     <orderEntry type="library" name="testng-6.8" level="project" />
-    <orderEntry type="library" name="org.assertj:assertj-assertions-generator:2.1.0" level="project" />
+    <orderEntry type="library" name="slf4j-log4j12-1.7.25" level="project" />
+    <orderEntry type="library" name="slf4j-log4j12-1.7.25-sources" level="project" />
+    <orderEntry type="library" name="fest-assert-core-2.0M10" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.testng:testng:6.8.21" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.beanshell:bsh:2.0b4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.beust:jcommander:1.27" level="project" />
