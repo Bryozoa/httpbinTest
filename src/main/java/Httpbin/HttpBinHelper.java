@@ -7,6 +7,10 @@ import org.json.JSONObject;
 *
 * Class HttpBinHelper is receiving and  processing JSON objects.
 *
+* Created: 15/12/2017
+*
+* @Author: MIsaeva
+*
 * */
 
 import java.util.Map;
@@ -62,7 +66,7 @@ public class HttpBinHelper {
         return responseJsonArgs;
     }
 
-    protected final JSONObject getJSONObjectJson(final JSONObject jsonObject) {
+    protected static final JSONObject getJSONObjectJson(final JSONObject jsonObject) {
         JSONObject responseJsonJson = new JSONObject();
 
         try {
@@ -80,7 +84,7 @@ public class HttpBinHelper {
         return responseJsonJson;
     }
 
-    protected final JSONObject getJSONObjectForm(final JSONObject jsonObject) {
+    protected static final JSONObject getJSONObjectForm(final JSONObject jsonObject) {
         JSONObject responseJsonForm = new JSONObject();
         try {
             if (((JSONObject) jsonObject.get("form")).length() == 0) {
@@ -95,7 +99,7 @@ public class HttpBinHelper {
         return responseJsonForm;
     }
 
-    protected final JSONObject getJSONObjectFiles(final JSONObject jsonObject) {
+    protected static final JSONObject getJSONObjectFiles(final JSONObject jsonObject) {
         JSONObject responseJsonFiles = new JSONObject();
         try {
             if (((JSONObject) jsonObject.get("files")).length() == 0) {
