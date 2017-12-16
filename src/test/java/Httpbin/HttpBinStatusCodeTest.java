@@ -6,11 +6,24 @@ import org.json.JSONObject;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
-import static org.assertj.core.api.Java6Assertions.assertThat;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+//import static org.assertj.core.api.Java6Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
+
+        /* Imported libraries: http://www.java2s.com/Code/Jar/j/Downloadjavajsonjar.htm
+         *                     https://www.slf4j.org/download.html
+         *                     https://repo1.maven.org/maven2/com/google/code/gson/gson/2.6.2/
+         *                     http://www.java2s.com/Code/Jar/t/Downloadtestng60jar.htm
+         *
+         *
+         * Class HttpBinGetTest is testing http://www.httpbin.org/status/:code
+         *
+         * Created: 15/12/2017
+         *
+         * */
 
 public class HttpBinStatusCodeTest {
 

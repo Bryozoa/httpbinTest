@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="3.789" tests="20" errors="0" skipped="0" failures="12">
+  <properties>
+    <property name="idea.version" value="2017.3"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="9.0.1+11"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-9.0.1\bin"/>
+    <property name="user.country.format" value="GB"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Bryozoa\IdeaProjects\TinkoffTest"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Bryozoa\IdeaProjects\TinkoffTest"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="9.0.1+11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="idea.modules.paths.file" value="C:\Users\Bryozoa\.IdeaIC2017.3\system\Maven\idea-projects-state-d97773d3.properties"/>
+    <property name="java.io.tmpdir" value="C:\Users\Bryozoa\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="C:\Users\Bryozoa\AppData\Local\Temp\idea-1-mvn.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-9.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files (x86)\Skype\Phone\;H:\Soft\Python;H:\Soft\Python\Scripts;."/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="53.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\Bryozoa"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="9"/>
+    <property name="user.name" value="Bryozoa"/>
+    <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="9"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2017.3 test"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-9.0.1"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language.format" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="9.0.1"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.3\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testGetArgs1" classname="Httpbin.HttpBinHeadersTest" time="0.745">
+    <failure message="[JSON body args] expected:&#10;&lt;&apos;{&quot;hello1&quot;:&quot;world1&quot;,&quot;hello2&quot;:&quot;world2&quot;}&apos;&gt;&#10; but was:&#10;&lt;&apos;{}&apos;&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [JSON body args] expected:
+<'{"hello1":"world1","hello2":"world2"}'>
+ but was:
+<'{}'>
+	at Httpbin.HttpBinHeadersTest.testGetArgs1(HttpBinHeadersTest.java:130)
+]]></failure>
+    <system-err><![CDATA[[main] INFO HttpBinHeadersTest - Test: testGetArgs1
+org.json.JSONException: JSONObject["args"] not found.
+	at org.json.JSONObject.get(JSONObject.java:476)
+	at Httpbin.HttpBinHelper.getJSONObjectArgs(HttpBinHelper.java:55)
+	at Httpbin.HttpBinHeadersTest.testGetArgs1(HttpBinHeadersTest.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]></system-err>
+  </testcase>
+  <testcase name="testGetArgs2" classname="Httpbin.HttpBinHeadersTest" time="0.149">
+    <failure message="[JSON body args] expected:&#10;&lt;&apos;{&quot;hello1&quot;:&quot;world1&quot;,&quot;hello2&quot;:&quot;world1&quot;}&apos;&gt;&#10; but was:&#10;&lt;&apos;{}&apos;&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [JSON body args] expected:
+<'{"hello1":"world1","hello2":"world1"}'>
+ but was:
+<'{}'>
+	at Httpbin.HttpBinHeadersTest.testGetArgs2(HttpBinHeadersTest.java:161)
+]]></failure>
+    <system-err><![CDATA[[main] INFO HttpBinHeadersTest - Test: testGetArgs2
+org.json.JSONException: JSONObject["args"] not found.
+	at org.json.JSONObject.get(JSONObject.java:476)
+	at Httpbin.HttpBinHelper.getJSONObjectArgs(HttpBinHelper.java:55)
+	at Httpbin.HttpBinHeadersTest.testGetArgs2(HttpBinHeadersTest.java:149)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]></system-err>
+  </testcase>
+  <testcase name="testGetArgs3" classname="Httpbin.HttpBinHeadersTest" time="0.136">
+    <failure message="[JSON body args] expected:&#10;&lt;&apos;{&quot;hello1&quot;:[&quot;world1&quot;,&quot;world2&quot;]}&apos;&gt;&#10; but was:&#10;&lt;&apos;{}&apos;&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [JSON body args] expected:
+<'{"hello1":["world1","world2"]}'>
+ but was:
+<'{}'>
+	at Httpbin.HttpBinHeadersTest.testGetArgs3(HttpBinHeadersTest.java:181)
+]]></failure>
+    <system-err><![CDATA[[main] INFO HttpBinHeadersTest - Test: testGetArgs3
+org.json.JSONException: JSONObject["args"] not found.
+	at org.json.JSONObject.get(JSONObject.java:476)
+	at Httpbin.HttpBinHelper.getJSONObjectArgs(HttpBinHelper.java:55)
+	at Httpbin.HttpBinHeadersTest.testGetArgs3(HttpBinHeadersTest.java:174)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]></system-err>
+  </testcase>
+  <testcase name="testGetArgs4" classname="Httpbin.HttpBinHeadersTest" time="0.141">
+    <failure message="[JSON body args] expected:&#10;&lt;&apos;{&quot;hello1&quot;:[&quot;world1&quot;,&quot;world1&quot;]}&apos;&gt;&#10; but was:&#10;&lt;&apos;{}&apos;&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [JSON body args] expected:
+<'{"hello1":["world1","world1"]}'>
+ but was:
+<'{}'>
+	at Httpbin.HttpBinHeadersTest.testGetArgs4(HttpBinHeadersTest.java:201)
+]]></failure>
+    <system-err><![CDATA[[main] INFO HttpBinHeadersTest - Test: testGetArgs4
+org.json.JSONException: JSONObject["args"] not found.
+	at org.json.JSONObject.get(JSONObject.java:476)
+	at Httpbin.HttpBinHelper.getJSONObjectArgs(HttpBinHelper.java:55)
+	at Httpbin.HttpBinHeadersTest.testGetArgs4(HttpBinHeadersTest.java:194)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]></system-err>
+  </testcase>
+  <testcase name="testGetDefaultBodyResponse" classname="Httpbin.HttpBinHeadersTest" time="0.147">
+    <failure message="[Header - Server] expected:&#10;&lt;&apos;nginx&apos;&gt;&#10; but was:&#10;&lt;&apos;meinheld/0.6.1&apos;&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [Header - Server] expected:
+<'nginx'>
+ but was:
+<'meinheld/0.6.1'>
+	at Httpbin.HttpBinHeadersTest.testGetDefaultBodyResponse(HttpBinHeadersTest.java:58)
+]]></failure>
+    <system-err><![CDATA[[main] INFO HttpBinHeadersTest - Test: testGetDefaultBodyResponse
+]]></system-err>
+  </testcase>
+  <testcase name="testGetHeaders" classname="Httpbin.HttpBinHeadersTest" time="0.14"/>
+  <testcase name="testGetInvalidMethod" classname="Httpbin.HttpBinHeadersTest" time="0.158"/>
+  <testcase name="testGetInvalidUrl" classname="Httpbin.HttpBinHeadersTest" time="0.265"/>
+  <testcase name="testPostArgs" classname="Httpbin.HttpBinStatusCodeTest" time="0.266"/>
+  <testcase name="testPostDefaultBodyResponse" classname="Httpbin.HttpBinStatusCodeTest" time="0.135">
+    <failure message="[Header - Server] expected:&#10;&lt;&apos;nginx&apos;&gt;&#10; but was:&#10;&lt;&apos;meinheld/0.6.1&apos;&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [Header - Server] expected:
+<'nginx'>
+ but was:
+<'meinheld/0.6.1'>
+	at Httpbin.HttpBinStatusCodeTest.testPostDefaultBodyResponse(HttpBinStatusCodeTest.java:57)
+]]></failure>
+    <system-err><![CDATA[[main] INFO HttpBinStatusCodeTest - Test: testPostDefaultBodyResponse
+]]></system-err>
+  </testcase>
+  <testcase name="testPostInvalidMethod" classname="Httpbin.HttpBinStatusCodeTest" time="0.135"/>
+  <testcase name="testPostJson1" classname="Httpbin.HttpBinStatusCodeTest" time="0.268"/>
+  <testcase name="testPostJson2" classname="Httpbin.HttpBinStatusCodeTest" time="0.136"/>
+  <testcase name="testPostJson3" classname="Httpbin.HttpBinStatusCodeTest" time="0.136"/>
+  <testcase name="testResponseHeadersDefault" classname="Httpbin.HttpBinRedirectTest" time="0.134">
+    <failure message="[Header - Server] expected:&#10;&lt;&apos;nginx&apos;&gt;&#10; but was:&#10;&lt;&apos;meinheld/0.6.1&apos;&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [Header - Server] expected:
+<'nginx'>
+ but was:
+<'meinheld/0.6.1'>
+	at Httpbin.HttpBinRedirectTest.testResponseHeadersDefault(HttpBinRedirectTest.java:50)
+]]></failure>
+    <system-err><![CDATA[[main] INFO HttpBinRedirectTest - Test: testResponseHeadersDefault
+]]></system-err>
+  </testcase>
+  <testcase name="testResponseHeadersInParameters1" classname="Httpbin.HttpBinRedirectTest" time="0.136">
+    <failure message="[Header - Server] expected:&#10;&lt;&apos;nginx&apos;&gt;&#10; but was:&#10;&lt;&apos;meinheld/0.6.1&apos;&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [Header - Server] expected:
+<'nginx'>
+ but was:
+<'meinheld/0.6.1'>
+	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters1(HttpBinRedirectTest.java:87)
+]]></failure>
+    <system-err><![CDATA[[main] INFO HttpBinRedirectTest - Test: testResponseHeadersInParameters1
+]]></system-err>
+  </testcase>
+  <testcase name="testResponseHeadersInParameters2" classname="Httpbin.HttpBinRedirectTest" time="0.155">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters2(HttpBinRedirectTest.java:123)
+</failure>
+    <system-err><![CDATA[[main] INFO HttpBinRedirectTest - Test: testResponseHeadersInParameters2
+]]></system-err>
+  </testcase>
+  <testcase name="testResponseHeadersInParameters3" classname="Httpbin.HttpBinRedirectTest" time="0.137">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters3(HttpBinRedirectTest.java:158)
+</failure>
+    <system-err><![CDATA[[main] INFO HttpBinRedirectTest - Test: testResponseHeadersInParameters3
+]]></system-err>
+  </testcase>
+  <testcase name="testResponseHeadersInParameters4" classname="Httpbin.HttpBinRedirectTest" time="0.135">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters4(HttpBinRedirectTest.java:192)
+</failure>
+    <system-err><![CDATA[[main] INFO HttpBinRedirectTest - Test: testResponseHeadersInParameters4
+]]></system-err>
+  </testcase>
+  <testcase name="testResponseHeadersInvalidMethod" classname="Httpbin.HttpBinRedirectTest" time="0.135">
+    <failure message="[Response code] expected:&#10;&lt;405&gt;&#10; but was:&#10;&lt;200&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [Response code] expected:
+<405>
+ but was:
+<200>
+	at Httpbin.HttpBinRedirectTest.testResponseHeadersInvalidMethod(HttpBinRedirectTest.java:218)
+]]></failure>
+    <system-err><![CDATA[[main] INFO HttpBinRedirectTest - Test: testGetInvalidMethod
+]]></system-err>
+  </testcase>
+</testsuite>
