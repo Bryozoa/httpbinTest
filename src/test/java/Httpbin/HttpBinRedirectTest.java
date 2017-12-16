@@ -10,13 +10,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.fest.assertions.api.Assertions.assertThat;
-import static org.fest.assertions.api.Assertions.fail;
+import static org.assertj.core.api.Java6Assertions.assertThat;
 
-public class HttpBinResponseHeadersTest {
+public class HttpBinRedirectTest {
 
     private static final String responseHeadersUrl = "http://www.httpbin.org/response-headers";
-    private static org.slf4j.Logger LOG = LoggerFactory.getLogger(HttpBinResponseHeadersTest.class.getSimpleName());
+    private static org.slf4j.Logger LOG = LoggerFactory.getLogger(HttpBinRedirectTest.class.getSimpleName());
 
     @Test(groups = "group2")
     public void testResponseHeadersDefault() {
@@ -183,7 +182,7 @@ public class HttpBinResponseHeadersTest {
         try {
             responseJson = new JSONObject(responseGet.getResponseBody());
 
-    
+
             JSONArray jsonArray = responseJson.getJSONArray("hello1");
 
             assertThat(jsonArray.toString()).as("Body - hello1").isEqualTo("[\"world1\",\"world2\"]");
