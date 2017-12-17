@@ -3,30 +3,13 @@
 <suite name="Failed suite [Sequential]" verbose="0">
   <test name="Sequential tests(failed)">
     <classes>
-      <class name="Httpbin.HttpBinHeadersTest">
-        <methods>
-          <include name="testGetArgs4"/>
-          <include name="testGetArgs1"/>
-          <include name="testGetArgs2"/>
-          <include name="testGetArgs3"/>
-          <include name="testGetDefaultBodyResponse"/>
-        </methods>
-      </class> <!-- Httpbin.HttpBinHeadersTest -->
       <class name="Httpbin.HttpBinRedirectTest">
         <methods>
-          <include name="testResponseHeadersInParameters2"/>
-          <include name="testResponseHeadersInParameters4"/>
           <include name="testResponseHeadersInParameters1"/>
-          <include name="testResponseHeadersInParameters3"/>
           <include name="testResponseHeadersDefault"/>
           <include name="testResponseHeadersInvalidMethod"/>
         </methods>
       </class> <!-- Httpbin.HttpBinRedirectTest -->
-      <class name="Httpbin.HttpBinStatusCodeTest">
-        <methods>
-          <include name="testPostDefaultBodyResponse"/>
-        </methods>
-      </class> <!-- Httpbin.HttpBinStatusCodeTest -->
     </classes>
   </test> <!-- Sequential tests(failed) -->
 </suite> <!-- Failed suite [Sequential] -->

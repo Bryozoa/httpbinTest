@@ -1,79 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 20, Failures: 12, Errors: 0, Skipped: 0, Time elapsed: 4.235 sec <<< FAILURE! - in TestSuite
-testGetArgs1(Httpbin.HttpBinHeadersTest)  Time elapsed: 0.495 sec  <<< FAILURE!
-java.lang.AssertionError: [JSON body args] expected:
-<'{"hello1":"world1","hello2":"world2"}'>
- but was:
-<'{}'>
-	at Httpbin.HttpBinHeadersTest.testGetArgs1(HttpBinHeadersTest.java:130)
-
-testGetArgs2(Httpbin.HttpBinHeadersTest)  Time elapsed: 0.176 sec  <<< FAILURE!
-java.lang.AssertionError: [JSON body args] expected:
-<'{"hello1":"world1","hello2":"world1"}'>
- but was:
-<'{}'>
-	at Httpbin.HttpBinHeadersTest.testGetArgs2(HttpBinHeadersTest.java:161)
-
-testGetArgs3(Httpbin.HttpBinHeadersTest)  Time elapsed: 0.141 sec  <<< FAILURE!
-java.lang.AssertionError: [JSON body args] expected:
-<'{"hello1":["world1","world2"]}'>
- but was:
-<'{}'>
-	at Httpbin.HttpBinHeadersTest.testGetArgs3(HttpBinHeadersTest.java:181)
-
-testGetArgs4(Httpbin.HttpBinHeadersTest)  Time elapsed: 0.157 sec  <<< FAILURE!
-java.lang.AssertionError: [JSON body args] expected:
-<'{"hello1":["world1","world1"]}'>
- but was:
-<'{}'>
-	at Httpbin.HttpBinHeadersTest.testGetArgs4(HttpBinHeadersTest.java:201)
-
-testGetDefaultBodyResponse(Httpbin.HttpBinHeadersTest)  Time elapsed: 0.153 sec  <<< FAILURE!
-java.lang.AssertionError: [Header - Server] expected:
-<'nginx'>
- but was:
-<'meinheld/0.6.1'>
-	at Httpbin.HttpBinHeadersTest.testGetDefaultBodyResponse(HttpBinHeadersTest.java:58)
-
-testPostDefaultBodyResponse(Httpbin.HttpBinStatusCodeTest)  Time elapsed: 0.136 sec  <<< FAILURE!
-java.lang.AssertionError: [Header - Server] expected:
-<'nginx'>
- but was:
-<'meinheld/0.6.1'>
-	at Httpbin.HttpBinStatusCodeTest.testPostDefaultBodyResponse(HttpBinStatusCodeTest.java:57)
-
-testResponseHeadersDefault(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.14 sec  <<< FAILURE!
-java.lang.AssertionError: [Header - Server] expected:
-<'nginx'>
- but was:
-<'meinheld/0.6.1'>
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersDefault(HttpBinRedirectTest.java:50)
-
-testResponseHeadersInParameters1(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.143 sec  <<< FAILURE!
-java.lang.AssertionError: [Header - Server] expected:
-<'nginx'>
- but was:
-<'meinheld/0.6.1'>
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters1(HttpBinRedirectTest.java:87)
-
-testResponseHeadersInParameters2(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.142 sec  <<< FAILURE!
-java.lang.NullPointerException: null
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters2(HttpBinRedirectTest.java:123)
-
-testResponseHeadersInParameters3(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.142 sec  <<< FAILURE!
-java.lang.NullPointerException: null
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters3(HttpBinRedirectTest.java:158)
-
-testResponseHeadersInParameters4(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.141 sec  <<< FAILURE!
-java.lang.NullPointerException: null
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters4(HttpBinRedirectTest.java:192)
-
-testResponseHeadersInvalidMethod(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.141 sec  <<< FAILURE!
+Tests run: 8, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.568 sec <<< FAILURE! - in TestSuite
+testResponseHeadersDefault(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.161 sec  <<< FAILURE!
 java.lang.AssertionError: [Response code] expected:
-<405>
- but was:
 <200>
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersInvalidMethod(HttpBinRedirectTest.java:218)
+ but was:
+<404>
+	at Httpbin.HttpBinRedirectTest.testResponseHeadersDefault(HttpBinRedirectTest.java:47)
+
+testResponseHeadersInParameters1(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.273 sec  <<< FAILURE!
+java.lang.AssertionError: [Response code] expected:
+<200>
+ but was:
+<404>
+	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters1(HttpBinRedirectTest.java:83)
+
+testResponseHeadersInvalidMethod(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.266 sec  <<< FAILURE!
+java.lang.AssertionError: [Response code] expected:
+<200>
+ but was:
+<404>
+	at Httpbin.HttpBinRedirectTest.testResponseHeadersInvalidMethod(HttpBinRedirectTest.java:114)
 

@@ -95,7 +95,7 @@ public class HttpBinRequest {
             Map<String, List<String>> headerFields = this.httpURLConnection.getHeaderFields();
 
             String responseBody = null;
-            if (!(responseCode == 404 || responseCode == 400 || responseCode == 405)) {
+            if (!(responseCode == 404 || responseCode == 503 || responseCode == 500)) {
                 in = new BufferedReader(
                         new InputStreamReader(this.httpURLConnection.getInputStream()));
                 String inputLine;

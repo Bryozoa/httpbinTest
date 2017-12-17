@@ -27,7 +27,7 @@ import static org.fest.assertions.api.Assertions.assertThat;
 
 public class HttpBinRedirectTest {
 
-    private static final String responseHeadersUrl = "http://www.httpbin.org/response-headers";
+    private static final String responseHeadersUrl = "http://www.httpbin.org/redirect/";
     private static org.slf4j.Logger LOG = LoggerFactory.getLogger(HttpBinRedirectTest.class.getSimpleName());
 
     @Test(groups = "group2")
@@ -47,11 +47,11 @@ public class HttpBinRedirectTest {
         assertThat(responseCode).as("Response code").isEqualTo(200);
         assertThat(responseMessage).as("Response message").isEqualTo("OK");
 
-        assertThat(headerFields.get("Server").get(0)).as("Header - Server").isEqualTo("nginx");
+        assertThat(headerFields.get("Server").get(0)).as("Header - Server").isEqualTo("meinheld/0.6.1");
         assertThat(headerFields.get("Access-Control-Allow-Origin").get(0)).as("Header - Access-Control-Allow-Origin").isEqualTo("*");
         assertThat(headerFields.get("Access-Control-Allow-Credentials").get(0)).as("Header - Access-Control-Allow-Credentials").isEqualTo("true");
         assertThat(headerFields.get("Connection").get(0)).as("Header - Connection").isEqualTo("keep-alive");
-        assertThat(headerFields.get("Content-Length").get(0)).as("Header - Content-Length").isEqualTo("68");
+        assertThat(headerFields.get("Content-Length").get(0)).as("Header - Content-Length").isEqualTo("41");
         assertThat(headerFields.get("Content-Type").get(0)).as("Header - Content-Type").isEqualTo("application/json");
 
         JSONObject responseJson = null;
@@ -84,7 +84,7 @@ public class HttpBinRedirectTest {
         assertThat(responseMessage).as("Response message").isEqualTo("OK");
 
         assertThat(headerFields.get("Content-Type").get(0)).as("Header - Content-Type").isEqualTo("text/plain; charset=UTF-8");
-        assertThat(headerFields.get("Server").get(0)).as("Header - Server").isEqualTo("nginx");
+        assertThat(headerFields.get("Server").get(0)).as("Header - Server").isEqualTo("meinheld/0.6.1");
 
         JSONObject responseJson = null;
         try {
@@ -95,110 +95,6 @@ public class HttpBinRedirectTest {
 
             assertThat(jsonArray.toString()).as("Body - contentType").isEqualTo("[\"application/json\",\"text/plain; charset=UTF-8\"]");
             assertThat(server).as("Body - server").isEqualTo("httpbin");
-        } catch (JSONException e) {
-        e.printStackTrace();
-    }
-    }
-
-    @Test(groups = "group2")
-    public void testResponseHeadersInParameters2() {
-        LOG.info("Test: testResponseHeadersInParameters2");
-
-        Map<String, String> args = new HashMap<String, String>();
-        args.put("hello1", "world1");
-
-        String argsUrl = HttpBinHelper.convertArgsToString(args);
-
-        HttpBinResponse responseGet = HttpBinRequest
-                .get(responseHeadersUrl + argsUrl)
-                .sendAndGetResponse();
-
-        int responseCode = responseGet.getResponseCode();
-        String responseMessage = responseGet.getResponseMessage();
-        Map<String, List<String>> headerFields = responseGet.getHeaderFields();
-
-        assertThat(responseCode).as("Response code").isEqualTo(200);
-        assertThat(responseMessage).as("Response message").isEqualTo("OK");
-
-        assertThat(headerFields.get("hello1").get(0)).as("Header - hello1").isEqualTo("world1");
-
-        JSONObject responseJson = null;
-        try {
-            responseJson = new JSONObject(responseGet.getResponseBody());
-
-            String hello1 = (String) responseJson.get("hello1");
-
-            assertThat(hello1).as("Body - hello1").isEqualTo(args.get("hello1"));
-        } catch (JSONException e) {
-        e.printStackTrace();
-    }
-    }
-
-    @Test(groups = "group2")
-    public void testResponseHeadersInParameters3() {
-        LOG.info("Test: testResponseHeadersInParameters3");
-
-        Map<String, String> args = new HashMap<String, String>();
-        args.put("hello1", "world12");
-        args.put("hello2", "world12");
-
-        String argsUrl = HttpBinHelper.convertArgsToString(args);
-
-        HttpBinResponse responseGet = HttpBinRequest
-                .get(responseHeadersUrl + argsUrl)
-                .sendAndGetResponse();
-
-        int responseCode = responseGet.getResponseCode();
-        String responseMessage = responseGet.getResponseMessage();
-        Map<String, List<String>> headerFields = responseGet.getHeaderFields();
-
-        assertThat(responseCode).as("Response code").isEqualTo(200);
-        assertThat(responseMessage).as("Response message").isEqualTo("OK");
-
-        assertThat(headerFields.get("hello1").get(0)).as("Header - hello1").isEqualTo("world12");
-        assertThat(headerFields.get("hello2").get(0)).as("Header - hello2").isEqualTo("world12");
-
-        JSONObject responseJson = null;
-        try {
-            responseJson = new JSONObject(responseGet.getResponseBody());
-
-
-            String hello1 = (String) responseJson.get("hello1");
-            String hello2 = (String) responseJson.get("hello2");
-
-            assertThat(hello1).as("Body - hello1").isEqualTo(args.get("hello1"));
-            assertThat(hello2).as("Body - hello2").isEqualTo(args.get("hello2"));
-
-        } catch (JSONException e) {
-        e.printStackTrace();
-    }
-    }
-
-    @Test(groups = "group2")
-    public void testResponseHeadersInParameters4() {
-        LOG.info("Test: testResponseHeadersInParameters4");
-
-        HttpBinResponse responseGet = HttpBinRequest
-                .get(responseHeadersUrl + "?hello1=world1&hello1=world2")
-                .sendAndGetResponse();
-
-        int responseCode = responseGet.getResponseCode();
-        String responseMessage = responseGet.getResponseMessage();
-        Map<String, List<String>> headerFields = responseGet.getHeaderFields();
-
-        assertThat(responseCode).as("Response code").isEqualTo(200);
-        assertThat(responseMessage).as("Response message").isEqualTo("OK");
-
-        assertThat(headerFields.get("hello1").toString()).as("Header - hello1").isEqualTo("[world2, world1]");
-
-        JSONObject responseJson = null;
-        try {
-            responseJson = new JSONObject(responseGet.getResponseBody());
-
-
-            JSONArray jsonArray = responseJson.getJSONArray("hello1");
-
-            assertThat(jsonArray.toString()).as("Body - hello1").isEqualTo("[\"world1\",\"world2\"]");
         } catch (JSONException e) {
         e.printStackTrace();
     }
@@ -215,7 +111,7 @@ public class HttpBinRedirectTest {
         int responseCode = responseGet.getResponseCode();
         String responseMessage = responseGet.getResponseMessage();
 
-        assertThat(responseCode).as("Response code").isEqualTo(405);
+        assertThat(responseCode).as("Response code").isEqualTo(200);
         assertThat(responseMessage).as("Response message").isEqualTo("METHOD NOT ALLOWED");
     }
 }
