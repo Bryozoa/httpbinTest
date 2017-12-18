@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Sequential" class="navigator-link">
-              <span class="suite-name border-failed">Sequential</span>
+              <span class="suite-name border-passed">Sequential</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,31 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 3 failed,   5 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Sequential" class="hide-methods failed suite-Sequential"> (hide)</a> <!-- hide-methods failed suite-Sequential -->
-                      <a href="#" panel-name="suite-Sequential" class="show-methods failed suite-Sequential"> (show)</a> <!-- show-methods failed suite-Sequential -->
-                    </span>
-                    <div class="method-list-content failed suite-Sequential">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Sequential" title="Httpbin.HttpBinRedirectTest" class="method navigator-link" hash-for-method="testResponseHeadersDefault">testResponseHeadersDefault</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Sequential" title="Httpbin.HttpBinRedirectTest" class="method navigator-link" hash-for-method="testResponseHeadersInParameters1">testResponseHeadersInParameters1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Sequential" title="Httpbin.HttpBinRedirectTest" class="method navigator-link" hash-for-method="testResponseHeadersInvalidMethod">testResponseHeadersInvalidMethod</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Sequential -->
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -145,7 +121,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Sequential" title="Httpbin.HttpBinRedirectTest" class="method navigator-link" hash-for-method="testInvalidMethod">testInvalidMethod</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Sequential" title="Httpbin.HttpBinStatusCodeTest" class="method navigator-link" hash-for-method="testOkMethod">testOkMethod</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Sequential" title="Httpbin.HttpBinRedirectTest" class="method navigator-link" hash-for-method="testRedirectInParameters">testRedirectInParameters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Sequential" title="Httpbin.HttpBinRedirectTest" class="method navigator-link" hash-for-method="testResponseRedirect">testResponseRedirect</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Sequential -->
@@ -160,56 +151,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Sequential" class="panel Sequential">
-          <div class="suite-Sequential-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Httpbin.HttpBinRedirectTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testResponseHeadersDefault">
-                  </a> <!-- testResponseHeadersDefault -->
-                  <span class="method-name">testResponseHeadersDefault</span>
-                  <div class="stack-trace">java.lang.AssertionError: [Response code] expected:
-&lt;200&gt;
- but was:
-&lt;404&gt;
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersDefault(HttpBinRedirectTest.java:47)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testResponseHeadersInParameters1">
-                  </a> <!-- testResponseHeadersInParameters1 -->
-                  <span class="method-name">testResponseHeadersInParameters1</span>
-                  <div class="stack-trace">java.lang.AssertionError: [Response code] expected:
-&lt;200&gt;
- but was:
-&lt;404&gt;
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters1(HttpBinRedirectTest.java:83)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testResponseHeadersInvalidMethod">
-                  </a> <!-- testResponseHeadersInvalidMethod -->
-                  <span class="method-name">testResponseHeadersInvalidMethod</span>
-                  <div class="stack-trace">java.lang.AssertionError: [Response code] expected:
-&lt;200&gt;
- but was:
-&lt;404&gt;
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersInvalidMethod(HttpBinRedirectTest.java:114)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Sequential-class-failed -->
           <div class="suite-Sequential-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -235,6 +176,35 @@
                   <a name="testGetInvalidUrl">
                   </a> <!-- testGetInvalidUrl -->
                   <span class="method-name">testGetInvalidUrl</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Sequential-class-passed -->
+          <div class="suite-Sequential-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Httpbin.HttpBinRedirectTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testInvalidMethod">
+                  </a> <!-- testInvalidMethod -->
+                  <span class="method-name">testInvalidMethod</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRedirectInParameters">
+                  </a> <!-- testRedirectInParameters -->
+                  <span class="method-name">testRedirectInParameters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testResponseRedirect">
+                  </a> <!-- testResponseRedirect -->
+                  <span class="method-name">testResponseRedirect</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -319,11 +289,11 @@
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">testOkMethod</span>
+                <span class="method-in-group-name">testInvalidMethod</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">testResponseHeadersInvalidMethod</span>
+                <span class="method-in-group-name">testOkMethod</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -331,11 +301,11 @@
               <span class="test-group-name">group2</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">testResponseHeadersDefault</span>
+                <span class="method-in-group-name">testRedirectInParameters</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">testResponseHeadersInParameters1</span>
+                <span class="method-in-group-name">testResponseRedirect</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -357,42 +327,42 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testErrorsMethod')
-data.setCell(0, 2, 'Httpbin.HttpBinStatusCodeTest')
-data.setCell(0, 3, 556);
+data.setCell(0, 1, 'testRedirectInParameters')
+data.setCell(0, 2, 'Httpbin.HttpBinRedirectTest')
+data.setCell(0, 3, 2968);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testGetDefaultBodyResponse')
-data.setCell(1, 2, 'Httpbin.HttpBinHeadersTest')
-data.setCell(1, 3, 392);
+data.setCell(1, 1, 'testErrorsMethod')
+data.setCell(1, 2, 'Httpbin.HttpBinStatusCodeTest')
+data.setCell(1, 3, 550);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testResponseHeadersInParameters1')
-data.setCell(2, 2, 'Httpbin.HttpBinRedirectTest')
-data.setCell(2, 3, 274);
+data.setCell(2, 1, 'testGetDefaultBodyResponse')
+data.setCell(2, 2, 'Httpbin.HttpBinHeadersTest')
+data.setCell(2, 3, 387);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testResponseHeadersInvalidMethod')
-data.setCell(3, 2, 'Httpbin.HttpBinRedirectTest')
-data.setCell(3, 3, 267);
+data.setCell(3, 1, 'testOkMethod')
+data.setCell(3, 2, 'Httpbin.HttpBinStatusCodeTest')
+data.setCell(3, 3, 143);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testResponseHeadersDefault')
-data.setCell(4, 2, 'Httpbin.HttpBinRedirectTest')
-data.setCell(4, 3, 159);
+data.setCell(4, 1, 'testGetHeaders')
+data.setCell(4, 2, 'Httpbin.HttpBinHeadersTest')
+data.setCell(4, 3, 138);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testOkMethod')
-data.setCell(5, 2, 'Httpbin.HttpBinStatusCodeTest')
-data.setCell(5, 3, 139);
+data.setCell(5, 1, 'testResponseRedirect')
+data.setCell(5, 2, 'Httpbin.HttpBinRedirectTest')
+data.setCell(5, 3, 138);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testGetHeaders')
-data.setCell(6, 2, 'Httpbin.HttpBinHeadersTest')
-data.setCell(6, 3, 139);
+data.setCell(6, 1, 'testInvalidMethod')
+data.setCell(6, 2, 'Httpbin.HttpBinRedirectTest')
+data.setCell(6, 3, 138);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'testGetInvalidUrl')
 data.setCell(7, 2, 'Httpbin.HttpBinHeadersTest')
-data.setCell(7, 3, 137);
+data.setCell(7, 3, 136);
 window.suiteTableData['Sequential']= { tableData: data, tableDiv: 'times-div-Sequential'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Sequential">
               </div> <!-- times-div-Sequential -->
             </div> <!-- times-div -->
@@ -425,43 +395,37 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testGetHeaders</span>
-                <span class="method-start">393 ms</span>
+                <span class="method-start">387 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testGetInvalidUrl</span>
-                <span class="method-start">533 ms</span>
+                <span class="method-start">525 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Httpbin.HttpBinStatusCodeTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testErrorsMethod</span>
-                <span class="method-start">672 ms</span>
+                <span class="method-start">663 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testOkMethod</span>
-                <span class="method-start">1229 ms</span>
+                <span class="method-start">1214 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Httpbin.HttpBinRedirectTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testResponseHeadersDefault</span>
-                <span class="method-start">1368 ms</span>
+                <span class="method-name">testInvalidMethod</span>
+                <span class="method-start">1358 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testResponseHeadersInParameters1</span>
-                <span class="method-start">1529 ms</span>
+                <span class="method-name">testRedirectInParameters</span>
+                <span class="method-start">1496 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testResponseHeadersInvalidMethod</span>
-                <span class="method-start">1803 ms</span>
+                <span class="method-name">testResponseRedirect</span>
+                <span class="method-start">4465 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

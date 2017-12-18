@@ -1,25 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.568 sec <<< FAILURE! - in TestSuite
-testResponseHeadersDefault(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.161 sec  <<< FAILURE!
-java.lang.AssertionError: [Response code] expected:
-<200>
- but was:
-<404>
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersDefault(HttpBinRedirectTest.java:47)
-
-testResponseHeadersInParameters1(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.273 sec  <<< FAILURE!
-java.lang.AssertionError: [Response code] expected:
-<200>
- but was:
-<404>
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters1(HttpBinRedirectTest.java:83)
-
-testResponseHeadersInvalidMethod(Httpbin.HttpBinRedirectTest)  Time elapsed: 0.266 sec  <<< FAILURE!
-java.lang.AssertionError: [Response code] expected:
-<200>
- but was:
-<404>
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersInvalidMethod(HttpBinRedirectTest.java:114)
-
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.139 sec - in TestSuite
