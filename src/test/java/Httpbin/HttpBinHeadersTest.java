@@ -84,15 +84,6 @@ public class HttpBinHeadersTest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        String url = null;
-        try {
-            url = (String) responseJson.get("url");
-            assertThat(url).as("Response body url").isEqualTo(getUrl);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
     }
 
     @Test(groups = "group1")

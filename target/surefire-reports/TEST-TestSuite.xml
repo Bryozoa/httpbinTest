@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="2.066" tests="8" errors="0" skipped="0" failures="3">
+<testsuite name="TestSuite" time="4.599" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2017.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\Users\Bryozoa\AppData\Local\Temp\idea-24-mvn.conf"/>
+    <property name="classworlds.conf" value="C:\Users\Bryozoa\AppData\Local\Temp\idea-1480-mvn.conf"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk-9.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files (x86)\Skype\Phone\;H:\Soft\Python;H:\Soft\Python\Scripts;."/>
     <property name="jdk.debug" value="release"/>
@@ -63,39 +63,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testGetDefaultBodyResponse" classname="Httpbin.HttpBinHeadersTest" time="0.394"/>
-  <testcase name="testGetHeaders" classname="Httpbin.HttpBinHeadersTest" time="0.138"/>
-  <testcase name="testGetInvalidUrl" classname="Httpbin.HttpBinHeadersTest" time="0.138"/>
-  <testcase name="testErrorsMethod" classname="Httpbin.HttpBinStatusCodeTest" time="0.557"/>
-  <testcase name="testOkMethod" classname="Httpbin.HttpBinStatusCodeTest" time="0.139"/>
-  <testcase name="testResponseHeadersDefault" classname="Httpbin.HttpBinRedirectTest" time="0.161">
-    <failure message="[Response code] expected:&#10;&lt;200&gt;&#10; but was:&#10;&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [Response code] expected:
-<200>
- but was:
-<404>
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersDefault(HttpBinRedirectTest.java:47)
-]]></failure>
-    <system-err><![CDATA[[main] INFO HttpBinRedirectTest - Test: testResponseHeadersDefault
-]]></system-err>
-  </testcase>
-  <testcase name="testResponseHeadersInParameters1" classname="Httpbin.HttpBinRedirectTest" time="0.273">
-    <failure message="[Response code] expected:&#10;&lt;200&gt;&#10; but was:&#10;&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [Response code] expected:
-<200>
- but was:
-<404>
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersInParameters1(HttpBinRedirectTest.java:83)
-]]></failure>
-    <system-err><![CDATA[[main] INFO HttpBinRedirectTest - Test: testResponseHeadersInParameters1
-]]></system-err>
-  </testcase>
-  <testcase name="testResponseHeadersInvalidMethod" classname="Httpbin.HttpBinRedirectTest" time="0.266">
-    <failure message="[Response code] expected:&#10;&lt;200&gt;&#10; but was:&#10;&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [Response code] expected:
-<200>
- but was:
-<404>
-	at Httpbin.HttpBinRedirectTest.testResponseHeadersInvalidMethod(HttpBinRedirectTest.java:114)
-]]></failure>
-    <system-err><![CDATA[[main] INFO HttpBinRedirectTest - Test: testGetInvalidMethod
-]]></system-err>
-  </testcase>
+  <testcase name="testGetDefaultBodyResponse" classname="Httpbin.HttpBinHeadersTest" time="0.388"/>
+  <testcase name="testGetHeaders" classname="Httpbin.HttpBinHeadersTest" time="0.135"/>
+  <testcase name="testGetInvalidUrl" classname="Httpbin.HttpBinHeadersTest" time="0.137"/>
+  <testcase name="testErrorsMethod" classname="Httpbin.HttpBinStatusCodeTest" time="0.551"/>
+  <testcase name="testOkMethod" classname="Httpbin.HttpBinStatusCodeTest" time="0.144"/>
+  <testcase name="testInvalidMethod" classname="Httpbin.HttpBinRedirectTest" time="0.138"/>
+  <testcase name="testRedirectInParameters" classname="Httpbin.HttpBinRedirectTest" time="2.968"/>
+  <testcase name="testResponseRedirect" classname="Httpbin.HttpBinRedirectTest" time="0.138"/>
 </testsuite>

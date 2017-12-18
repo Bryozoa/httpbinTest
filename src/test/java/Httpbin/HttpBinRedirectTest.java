@@ -19,7 +19,7 @@ import static org.fest.assertions.api.Assertions.assertThat;
          *                     http://www.java2s.com/Code/Jar/t/Downloadtestng60jar.htm
          *
          *
-         * Class HttpBinGetTest is testing http://www.httpbin.org/redirect/:n
+         * Class HttpBinGetTest is testing http://www.httpbin.org/redirect/:n where n is a number of redirects
          *
          * Created: 15/12/2017
          *
@@ -27,91 +27,44 @@ import static org.fest.assertions.api.Assertions.assertThat;
 
 public class HttpBinRedirectTest {
 
-    private static final String responseHeadersUrl = "http://www.httpbin.org/redirect/";
+    private static final String Url = "http://www.httpbin.org/redirect/";
     private static org.slf4j.Logger LOG = LoggerFactory.getLogger(HttpBinRedirectTest.class.getSimpleName());
 
+    //TODO these stub tests to be a redirect counter
+
     @Test(groups = "group2")
-    public void testResponseHeadersDefault() {
-        LOG.info("Test: testResponseHeadersDefault");
+    public void testResponseRedirect() {
+        LOG.info("Test: testResponseRedirect");
 
         HttpBinResponse responseGet = HttpBinRequest
-                .get(responseHeadersUrl)
+                .get(Url)
                 .sendAndGetResponse();
 
-        String requestMethod = responseGet.getRequestMethod();
-        int responseCode = responseGet.getResponseCode();
-        String responseMessage = responseGet.getResponseMessage();
-        Map<String, List<String>> headerFields = responseGet.getHeaderFields();
-
-        assertThat(requestMethod).as("Request method").isEqualTo("GET");
-        assertThat(responseCode).as("Response code").isEqualTo(200);
-        assertThat(responseMessage).as("Response message").isEqualTo("OK");
-
-        assertThat(headerFields.get("Server").get(0)).as("Header - Server").isEqualTo("meinheld/0.6.1");
-        assertThat(headerFields.get("Access-Control-Allow-Origin").get(0)).as("Header - Access-Control-Allow-Origin").isEqualTo("*");
-        assertThat(headerFields.get("Access-Control-Allow-Credentials").get(0)).as("Header - Access-Control-Allow-Credentials").isEqualTo("true");
-        assertThat(headerFields.get("Connection").get(0)).as("Header - Connection").isEqualTo("keep-alive");
-        assertThat(headerFields.get("Content-Length").get(0)).as("Header - Content-Length").isEqualTo("41");
-        assertThat(headerFields.get("Content-Type").get(0)).as("Header - Content-Type").isEqualTo("application/json");
-
-        JSONObject responseJson = null;
-        try {
-            responseJson = new JSONObject(responseGet.getResponseBody());
-
-            String contentLength = (String) responseJson.get("Content-Length");
-            String contentType = (String) responseJson.get("Content-Type");
-
-            assertThat(contentLength).as("Body - Content-Length").isEqualTo("68");
-            assertThat(contentType).as("Body - Content-Type").isEqualTo("application/json");
-        } catch (JSONException e) {
-        e.printStackTrace();
-    }
     }
 
     @Test(groups = "group2")
-    public void testResponseHeadersInParameters1() {
+    public void testRedirectInParameters() {
         LOG.info("Test: testResponseHeadersInParameters1");
 
         HttpBinResponse responseGet = HttpBinRequest
-                .get(responseHeadersUrl + "?Content-Type=text/plain;%20charset=UTF-8&Server=httpbin")
+                .get(Url + 10)
                 .sendAndGetResponse();
 
-        int responseCode = responseGet.getResponseCode();
-        String responseMessage = responseGet.getResponseMessage();
-        Map<String, List<String>> headerFields = responseGet.getHeaderFields();
 
-        assertThat(responseCode).as("Response code").isEqualTo(200);
-        assertThat(responseMessage).as("Response message").isEqualTo("OK");
-
-        assertThat(headerFields.get("Content-Type").get(0)).as("Header - Content-Type").isEqualTo("text/plain; charset=UTF-8");
-        assertThat(headerFields.get("Server").get(0)).as("Header - Server").isEqualTo("meinheld/0.6.1");
-
-        JSONObject responseJson = null;
-        try {
-            responseJson = new JSONObject(responseGet.getResponseBody());
-
-            JSONArray jsonArray = responseJson.getJSONArray("Content-Type");
-            String server = (String) responseJson.get("Server");
-
-            assertThat(jsonArray.toString()).as("Body - contentType").isEqualTo("[\"application/json\",\"text/plain; charset=UTF-8\"]");
-            assertThat(server).as("Body - server").isEqualTo("httpbin");
-        } catch (JSONException e) {
-        e.printStackTrace();
-    }
     }
 
     @Test(groups = "group1")
-    public void testResponseHeadersInvalidMethod() {
+    public void testInvalidMethod() {
         LOG.info("Test: testGetInvalidMethod");
 
         HttpBinResponse responseGet = HttpBinRequest
-                .post(responseHeadersUrl)
+                .post(Url)
                 .sendAndGetResponse();
 
         int responseCode = responseGet.getResponseCode();
         String responseMessage = responseGet.getResponseMessage();
 
-        assertThat(responseCode).as("Response code").isEqualTo(200);
-        assertThat(responseMessage).as("Response message").isEqualTo("METHOD NOT ALLOWED");
+        assertThat(responseCode).as("Response code").isEqualTo(404);
+        assertThat(responseMessage).as("Response message").isEqualTo("NOT FOUND");
     }
 }

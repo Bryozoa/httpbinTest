@@ -5,9 +5,7 @@
     <classes>
       <class name="Httpbin.HttpBinRedirectTest">
         <methods>
-          <include name="testResponseHeadersInParameters1"/>
-          <include name="testResponseHeadersDefault"/>
-          <include name="testResponseHeadersInvalidMethod"/>
+          <include name="testInvalidMethod"/>
         </methods>
       </class> <!-- Httpbin.HttpBinRedirectTest -->
     </classes>
