@@ -1,17 +1,10 @@
 package Httpbin;
 
-import com.google.gson.Gson;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-//import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.fest.assertions.api.Assertions.assertThat;
 
         /* Imported libraries: http://www.java2s.com/Code/Jar/j/Downloadjavajsonjar.htm
