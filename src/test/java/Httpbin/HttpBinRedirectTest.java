@@ -1,16 +1,9 @@
 package Httpbin;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-//import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.fest.assertions.api.Assertions.assertThat;
 
         /* Imported libraries: http://www.java2s.com/Code/Jar/j/Downloadjavajsonjar.htm
@@ -37,21 +30,15 @@ public class HttpBinRedirectTest {
         LOG.info("Test: testResponseRedirect");
 
         HttpBinResponse responseGet = HttpBinRequest
-                .get(Url)
+                .get(Url+10)
                 .sendAndGetResponse();
+
+       int countRedirects = HttpBinRequest.countRedirects(Url+10, 10);
+
+        assertThat(countRedirects).as("Redirect counts").isEqualTo(10);
 
     }
 
-    @Test(groups = "group2")
-    public void testRedirectInParameters() {
-        LOG.info("Test: testResponseHeadersInParameters1");
-
-        HttpBinResponse responseGet = HttpBinRequest
-                .get(Url + 10)
-                .sendAndGetResponse();
-
-
-    }
 
     @Test(groups = "group1")
     public void testInvalidMethod() {

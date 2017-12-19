@@ -4,11 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.util.List;
 import java.util.Map;
@@ -51,36 +49,8 @@ public class HttpBinRequest {
         return new HttpBinRequest(url, HTTP_METHOD.POST);
     }
 
-    private HttpBinRequest addMethod(HTTP_METHOD method) {
-        this.method = method;
-        try {
-            this.httpURLConnection.setRequestMethod(method.toString());
-        } catch (ProtocolException e) {
-            e.printStackTrace();
-        }
-        return this;
-    }
-
-
     public final HttpBinRequest addHeader(final String key, final String value) {
         this.httpURLConnection.setRequestProperty(key, value);
-        return this;
-    }
-
-    public final HttpBinRequest addBody(final String body) {
-        if (this.method.equals(HTTP_METHOD.GET)) {
-            LOG.error(String.format("Body is not allowed in method: %s", HTTP_METHOD.GET));
-        }
-        this.httpURLConnection.setDoOutput(true);
-        DataOutputStream wr;
-        try {
-            wr = new DataOutputStream(this.httpURLConnection.getOutputStream());
-            wr.writeBytes(body);
-            wr.flush();
-            wr.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         return this;
     }
 
@@ -124,28 +94,39 @@ public class HttpBinRequest {
         return httpResponse;
     }
 
+    public static final int countRedirects(String url, int hopsNumber) {
+        int Redirects = 0;
+        try {
+
+            HttpURLConnection connection = (HttpURLConnection) (new URL(url).openConnection());
+            connection.setInstanceFollowRedirects(false);
+            connection.connect();
+            int responseCode = connection.getResponseCode();
+            System.out.println("Original Url" + "" + url + responseCode);
+
+
+            while (responseCode != 200) {
+                    String newUrl = "http://www.httpbin.org" + connection.getHeaderField("Location");
+                    System.out.println("newUrl: " + newUrl);
+                    HttpURLConnection conn = (HttpURLConnection) new URL(newUrl).openConnection();
+                    connection.setInstanceFollowRedirects(false);
+                    responseCode = conn.getResponseCode();
+                    Redirects++;
+                    System.out.println("Redirects: " + Redirects);
+                    System.out.println("location is" + newUrl);
+                    System.out.println("number of Hops before Reaching " + conn.getURL() + "is" + Redirects);
+
+            }
+
+        }
+        catch (Exception e){
+        e.printStackTrace();
+        }
+        return Redirects;
+    }
 
     public enum HTTP_METHOD {
         GET, PUT, POST, DELETE, OPTIONS, HEAD, CONNECT, TRACE
-    }
-
-    public enum CONTENT_TYPE {
-        APPLICATION_XML("application/xml"), APPLICATION_JSON("application/json");
-
-        private String value;
-
-        CONTENT_TYPE(final String value) {
-            this.value = value;
-        }
-
-        @Override
-        public String toString() {
-            return value;
-        }
-    }
-
-    public final HTTP_METHOD getMethod() {
-        return this.method;
     }
 
     public final String getUrl() {
